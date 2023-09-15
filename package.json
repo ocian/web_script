@@ -1,0 +1,49 @@
+{
+  "name": "github_ocian_web_script",
+  "version": "1.0.0",
+  "description": "package web assets easily and usful",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "cross-env TS_NODE_PROJECT=\"webpack/tsconfig-for-webpack-config.json\" webpack serve",
+    "build": "cross-env TS_NODE_PROJECT=\"webpack/tsconfig-for-webpack-config.json\" webpack",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ocian/web_script.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ocian/web_script/issues"
+  },
+  "homepage": "https://github.com/ocian/web_script#readme",
+  "devDependencies": {
+    "@types/node": "^20.6.0",
+    "@types/webpack": "^5.28.2",
+    "autoprefixer": "^10.4.15",
+    "cross-env": "^7.0.3",
+    "css-loader": "^6.8.1",
+    "html-webpack-plugin": "^5.5.3",
+    "postcss-loader": "^7.3.3",
+    "sass": "^1.66.1",
+    "sass-loader": "^13.3.2",
+    "style-loader": "^3.3.3",
+    "ts-loader": "^9.4.4",
+    "ts-node": "^10.9.1",
+    "tsconfig-paths": "^4.2.0",
+    "typescript": "^5.2.2",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1",
+    "zx": "^7.2.3"
+  },
+  "dependencies": {
+    "@types/react": "^18.2.21",
+    "@types/react-dom": "^18.2.7",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}

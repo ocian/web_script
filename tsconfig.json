@@ -1,0 +1,8 @@
+{
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "sourceMap": true,
+    "module": "ESNext"
+  },
+  "exclude": ["webpack.config.ts", "webpack/webpack.config.ts"]
+}
