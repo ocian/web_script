@@ -17,6 +17,15 @@ package web assets easily and usful
 
 ## 运行项目
 
+### 添加 submodule
+
+首先需要把这份仓库的代码放置到主工程的 scripts 目录，才可以正常使用。
+
+```sh
+git clone git@github.com:ocian/web_script.git scripts
+git submodule add git@github.com:ocian/web_script.git scripts
+```
+
 ### 安装项目依赖
 
 ```sh
