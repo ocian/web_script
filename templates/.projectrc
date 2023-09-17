@@ -1,0 +1,16 @@
+{
+  "default": {
+    "html": "./html/common.ejs",
+    "templateParameters": {
+      "title": "Document"
+    }
+  },
+  "pages": {
+    "index": {
+      "entries": "./pages/index.tsx",
+      "templateParameters": {
+        "title": "Home Page"
+      }
+    }
+  }
+}

@@ -15,21 +15,48 @@ package web assets easily and usful
       3. 全局安装 npm 包 serve `npm i -g serve`
       4. 查看全局安装的 npm 包列表 `npm ls -g`
 
-## 安装项目依赖
+## 运行项目
+
+### 安装项目依赖
 
 ```sh
-sh <<EOF
-#DEPS_WEBPACK_BASE="webpack webpack-cli webpack-dev-server cross-env"
-#DEPS_WEBPACK_HTML="html-webpack-plugin"
-#DEPS_WEBPACK_TS="typescript ts-node @types/node @types/webpack tsconfig-paths"
-#DEPS_WEBPACK_LOADER_CSS="autoprefixer css-loader postcss-loader sass sass-loader style-loader"
-#DEPS_WEBPACK_LOADER_TS="typescript ts-loader"
-DEPS_REACT="react react-dom @types/react @types/react-dom"
-DEPS_REACT_ROUTER="react-router-dom localforage match-sorter sort-by"
-DEPS_BOOTSTRAP="bootstrap @popperjs/core"
-#npm i -D $DEPS_WEBPACK_BASE $DEPS_WEBPACK_HTML $DEPS_WEBPACK_TS $DEPS_WEBPACK_LOADER_CSS $DEPS_WEBPACK_LOADER_CSS $DEPS_WEBPACK_LOADER_TS
-npm i $DEPS_REACT $DEPS_REACT_ROUTER $DEPS_BOOTSTRAP
-EOF
+npm i -D zx
+npx zx scripts/main.mjs --install all # 安装 npm 依赖
 ```
 
+### 生成项目基础目录结构
 
+```sh
+npx zx scripts/main.mjs --init
+```
+
+### 运行项目
+
+```sh
+npx zx scripts/main.mjs --run dev
+```
+
+### 构建项目
+
+```sh
+npx zx scripts/main.mjs --run build
+```
+
+### 使用 npm script
+
+> 这是一个可选的步骤
+
+运行和构建两个步骤，可以通过 npm script 来运行，需要把下面三行手动写入到项目的 package.json 文件的 scripts 条目中。
+
+```json
+{
+   "scripts": {
+      "start": "npm run dev",
+      "dev": "zx scripts/main.mjs --run dev",
+      "build": "zx scripts/main.mjs --run build"
+   }
+}
+```
+
+* 运行项目，可以使用 `npm start` 或者 `npm run dev`
+* 构建项目，可以使用 `npm run build`
